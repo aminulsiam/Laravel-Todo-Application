@@ -8,9 +8,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function __construct(){
-    	$this->middleware('auth',['only'=>'edit','update']);
-    }
 
     // Show User Registration Form
     public function userRegForm(){
@@ -39,21 +36,31 @@ class UserController extends Controller
     }
 
     // User Updated
-    public function userUpdated(User $user, Request $request){
+    public function userUpdated(Request $request){
+
     	$this->validate($request, [
-            'name'      => 'required',
+            'name'      => 'required|',
             'email'     => 'required|email',
             'password'  => 'confirmed'
         ]);
+
+    	// Getting users id 
+        $user = User::find($request->id);
+
         $user->name     = $request->get('name');
         $user->email    = $request->get('email');
+  
         if($request->get('password') !== ''){
-            $user->password = $request->get('password');
+            $user->password = bcrypt($request->get('password'));
         }
-        $user->save();
+
+        // Updating this user 
+        $user->update();
+
         return redirect('/todo')
             ->with('flash_notification.message', 'Profile updated successfully')
             ->with('flash_notification.level', 'success');
+    
     }
 
 
