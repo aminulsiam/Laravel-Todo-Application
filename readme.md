@@ -53,9 +53,9 @@ If you have any query please contact at aminulhossain90@gmail.com
 
 ## Screenshot
 
-![Landing Page](/screenshots/ss1.png)
-![Sign In Page](/screenshots/ss2.png)
-![Registration Page](/screenshots/ss3.png)
-![ToDo List Page](/screenshots/ss4.png)
-![Create New ToDo Page](/screenshots/ss5.png)
-![User Profile Page](/screenshots/ss6.png)
+![Landing Page](/screenshot/ss1.png)
+![Sign In Page](/screenshot/ss2.png)
+![Registration Page](/screenshot/ss3.png)
+![ToDo List Page](/screenshot/ss4.png)
+![Create New ToDo Page](/screenshot/ss5.png)
+![User Profile Page](/screenshot/ss6.png)
