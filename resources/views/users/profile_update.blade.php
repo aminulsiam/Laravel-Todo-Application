@@ -6,8 +6,7 @@
 
     {!! Form::model($user, ['method' => 'put', 'route' => ['user.update', $user->id], 'class' => 'form-horizontal', 'role' => 'form']) !!}
         @include('users._form')
-
-        {!! Form::hidden('id', null,['class' => 'form-control',]) !!}
+        {!! Form::hidden('id', null,['class' => 'form-control']) !!}
         <!-- submit button -->
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
